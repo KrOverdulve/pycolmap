@@ -185,7 +185,7 @@ class SceneManager:
             is_camera_description_line = False
 
             for line in iter(lambda: f.readline().strip(), ''):
-                if not line or line.startswith('#'):
+                if line.startswith('#'):
                     continue
 
                 is_camera_description_line = not is_camera_description_line
