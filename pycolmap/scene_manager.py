@@ -184,7 +184,7 @@ class SceneManager:
         with open(input_file, 'r') as f:
             is_camera_description_line = False
 
-            for line in iter(lambda: f.readline().strip(), ''):
+            for line in [l.strip() for l in f.readlines()]:
                 if line.startswith('#'):
                     continue
 
